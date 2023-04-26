@@ -1,5 +1,5 @@
 -----------------------------------Kubeadm Installation---------------------------------------------------------------------------------------------------------------
-
+#TrainWithShubham #kubeWeekChallenge
 ---------------------------------Master Node--------------------------------------------------------------------------------------------------------------------------------------------
     1  sudo apt-get update
     2  sudo apt-get update -y
@@ -34,3 +34,6 @@
     1  kubeadm reset pre-flight checks
     2  kubeadm join 172.31.84.208:6443 --token nqzdbq.muk46aeob8vejegz     --discovery-token-ca-cert-hash sha256:6231736dbfc8c9d3547e2178cc8f090cdba6f86ac6f33d6601273af1e92e3124  --v=5 #For version 5 of docker
     3  docker ps
+    
+    
+    #TrainWithShubham #kubeWeekChallenge
