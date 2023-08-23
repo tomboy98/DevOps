@@ -1,0 +1,22 @@
+-----------------------------------------Docker Fundamentals---------------------------------------------------------
+
+docker --version - Check the version
+docker pull <image_name> - To pull the latest image from docker hub
+docker images - To check which all images are present.
+docker run -it -d <image_name> - To run the container iteratively in the background for the specific image
+docker ps - Shows the docker conntainers which are running.
+docker ps -a - Shows all the containers which are both exited and also running.
+docker exec -it <container_id> bash - To go inside the container and perform any task.
+docker start <container_id> - To start a container
+docker stop <container_id> - To stop a container
+docker rm <container_id> - Removes the container
+docker rmi <image_id>- Removes a specified image
+docker --help - all the basic docker commands and options are displayed
+docker login - To login into docker desktop
+docker kill <container_id> - Forcefully stop the container and remove it
+docker images prune - Removes unused images
+docker logs <container_id> - To check the container logs
+docker commit <container_id><username/image_name_we_have_to_push> - Commiting the new image to docker hub
+docker push <username/image_name> - Pushing the image into docker hub
+docker history <running_image_name> - Displays the history of the image
+docker search <image_name> - Searches for the particular image name in the docker hub
