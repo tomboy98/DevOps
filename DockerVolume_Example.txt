@@ -19,7 +19,7 @@ local     todo-mysql-data
         "CreatedAt": "2023-08-24T14:46:32Z",
         "Driver": "local",
         "Labels": null,
-        "Mountpoint": "/var/lib/docker/volumes/ash-vol/_data",
+        "Mount point": "/var/lib/docker/volumes/ash-vol/_data",- Here is the path where volume is mounted (*IMPORTANT*)
         "Name": "ash-vol",
         "Options": null,
         "Scope": "local"

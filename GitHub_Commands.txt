@@ -1,0 +1,12 @@
+--------------------------------GitHub_Fundamentals-------------------------------------
+git init - Initialising the repository
+git clone " SSH_URL" - Here i created a ssh key and used it for authentication
+git remote add origin "SSH URL" 
+git status - to check the status if any file is in which branch and what all needs to be added.
+git add . - Adds all files in the current directory
+git add <file_name> - adds a specific file to the repository
+git commit -m "Message" - Committing the local changes
+git push origin <branch_name> - For pushing the local changes to the remote repository
+git checkout -b <new_branch_name> - For creating a new branch
+git branch - For listing down the branches
+git checkout <branch_name> - For switching between branches 
