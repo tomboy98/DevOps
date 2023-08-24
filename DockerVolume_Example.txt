@@ -1,0 +1,37 @@
+Script started on Thu Aug 24 20:16:08 2023
+                                                                              ashwathyjairaj@Ashwathys-MacBook-Air ~ % docker volume create ash-volash-vol
+ashwathyjairaj@Ashwathys-MacBook-Air ~ % docker volume lsDRIVER    VOLUME NAME
+local     9d4d1a6a2afedb438cd990c6bc511b9fc768d733a6e62d3c6ed5754e3e9a2ab4
+local     25d9ce603ed589fca285f605014bd80af000093d00aa99eb72ee61d1ab0f05d0
+local     32c72f6b212e715d32f1d71bf1fea55995efe68bfdb5a527bf42024f5a770f46
+local     75c2ecdb95936097972418e5b9dcd83da78b0ccfa11f7d0ecf53ceb1dc2d23e1
+local     afa7daf9b480e118144fd637da4a19c6bc9565fcd98c22543b453018502ade6c
+local     app_todo-mysql-data
+local     ash-vol
+local     f0acbb08954e19508c0b58202670c3bb92e5daeb75c32b2adf270039fd1aeb99
+local     minikube
+local     my-vol
+local     todo-db
+local     todo-mysql-data
+                                                                               ashwathyjairaj@Ashwathys-MacBook-Air ~ % docker volume inspect ash-vol
+[
+    {
+        "CreatedAt": "2023-08-24T14:46:32Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/ash-vol/_data",
+        "Name": "ash-vol",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+ashwathyjairaj@Ashwathys-MacBook-Air ~ % docker volume rm ash-vol
+ash-vol
+                                                                              ashwathyjairaj@Ashwathys-MacBook-Air ~ % [
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Aug 24 20:17:51 2023
