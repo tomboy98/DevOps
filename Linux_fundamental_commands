@@ -24,7 +24,7 @@ echo "text.." > already existing filename --> creating text inside a file
 cat filename --> viewing inside file
 echo "text" >> filename --> for appending texts in a file
 cat > filename --> writing multiple texts in a file
-nanao filename --> editing texts inside a file
+nano filename --> editing texts inside a file
 tree --> shows all directory and directory path in a file
 tree -d --> shows only directory
 tree -f --> shows paths of each file
