@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------------------LINUX COMMANDS-------------------------------------------------------------------------------------------------------------------------------
+
+pwd --> present working directory
+ls --> list all file and directories
+cd --> change directory
+cd .  --> current directory
+cd .. --> previous directory
+cd ../.. --> previous to previous directory
+cd - --> previous location
+ls -l --> long list all permissions
+ls -R --> path of all directories 
+ls -lRhs --> long listing directories with each size and path
+mkdir directoryname --> make directory
+mkdir -p path --> nested directory
+mkdir directoryname directoryname directoryname --> creating nultiple directory
+mkdir directoryname/{directoryname,directoryname} --> creating two or more directory inside a directory
+mkdir directoryname{1..100} --> creating 100 directory together
+mkdir "ghih hjiy" --> creating directory with two or more words
+man commandname --> help for all commands
+touch filename --> creating a new file
+touch filename filename filename --> creating multiple files
+echo --> a line of text
+echo "text.." > already existing filename --> creating text inside a file 
+cat filename --> viewing inside file
+echo "text" >> filename --> for appending texts in a file
+cat > filename --> writing multiple texts in a file
+nanao filename --> editing texts inside a file
+tree --> shows all directory and directory path in a file
+tree -d --> shows only directory
+tree -f --> shows paths of each file
+rmdir directoryname --> to delete empty directories
+rm -r directoryname --> To delete non-empty directories
+rm-r directoryname/{directoryname1,directoryname2} --> for specific directory
+rm -r directoryname{1...n} --> for n no. of directories
+history --> shows all the commands used
+
