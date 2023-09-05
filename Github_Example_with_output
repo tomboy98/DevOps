@@ -1,0 +1,685 @@
+Last login: Sat Sep  2 20:13:25 on console
+ashwathyjairaj@Ashwathys-MacBook-Air ~ % ls
+Desktop			Public			node_modules
+Documents		docker.txt		output.txt
+Downloads		frontend.yaml		pod-rs.yaml
+Library			getting-started		values.yaml
+Movies			minikube-darwin-amd64	yarn.lock
+Music			minikube-darwin-arm64
+Pictures		nginx-deployment.yaml
+ashwathyjairaj@Ashwathys-MacBook-Air ~ % cd Documents
+ashwathyjairaj@Ashwathys-MacBook-Air Documents % ls
+DeVops_Learn	Devops		Python
+ashwathyjairaj@Ashwathys-MacBook-Air Documents % cd DeVops_Learn 
+ashwathyjairaj@Ashwathys-MacBook-Air DeVops_Learn % ls
+DevOps		output.txt	output1.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DeVops_Learn % cd DevOps 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		Kubernetes-version-5-installation-guide
+Docker_Commands.txt			README.md
+GitHub_Commands.txt			git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % rm git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		Kubernetes-version-5-installation-guide
+Docker_Commands.txt			README.md
+GitHub_Commands.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    git_test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git restore git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		GitHub_Commands.txt			README.md
+Docker_Commands.txt			Kubernetes-version-5-installation-guide	git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		GitHub_Commands.txt			README.md
+Docker_Commands.txt			Kubernetes-version-5-installation-guide	git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git diff
+diff --git a/git_test.txt b/git_test.txt
+index e69de29..9d8a4e7 100644
+--- a/git_test.txt
++++ b/git_test.txt
+@@ -0,0 +1 @@
++this is test file
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add git_test.txt 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added some changes"
+[master 8c078b1] added some changes
+ 1 file changed, 1 insertion(+)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git diff
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log
+commit 8c078b1a0a4197ed912637f2ac9578cd8abf17b3 (HEAD -> master)
+Author: Ashwathy <ashwathyjairaj@gmail.com>
+Date:   Sun Sep 3 10:25:26 2023 +0530
+
+    added some changes
+
+commit defb06f18f52406e4ec382550d6ba154b68d2afd
+Author: Ashwathy <ashwathyjairaj@gmail.com>
+Date:   Sat Sep 2 09:11:35 2023 +0530
+
+     Adding a test file for git
+
+commit 382f068bf427eb42633a30d426d185e15ea51a79 (origin/master, origin/HEAD)
+Author: Ashwathy <ashwathyjairaj@gmail.com>
+Date:   Thu Aug 24 21:19:18 2023 +0530
+
+    Adding_new_commands
+
+commit 3a86291868d27b097f7fcf3515edd16404098bce
+Author: Ashwathy <ashwathyjairaj@gmail.com>
+Date:   Thu Aug 24 20:53:58 2023 +0530
+
+    Docker_VolumrExample
+
+commit 2c5f0f2ee4c8e78d4b118de5e2f86508e9066b6a
+Author: Ashwathy Jairaj <43380953+tomboy98@users.noreply.github.com>
+Date:   Wed Aug 23 22:17:02 2023 +0530
+
+    Create Docker_Fundamentals
+    
+    Added_Commands_for_docker_fundamentals
+
+commit 23134e3d64a151ebed0d2ea12bcbb090027a44f5
+Author: tomboy98 <43380953+tomboy98@users.noreply.github.com>
+Date:   Wed Apr 26 20:54:02 2023 +0530
+
+    Update Kubernetes-version-5-installation-guide
+
+commit 40421ef8a3502a9bf315a5fb610f404b505dc031
+Author: tomboy98 <43380953+tomboy98@users.noreply.github.com>
+Date:   Wed Apr 26 20:19:46 2023 +0530
+
+    Kubernetes-version-5-installation-guide
+    
+    Kubernetes-version-5-installation-guide
+
+commit db1451c3612975b042d99c990591e7fab8f8c65e
+Author: “tomboy98” <ubuntu@ip-172-31-81-12.ec2.internal>
+Date:   Mon Apr 10 16:39:15 2023 +0000
+
+    Task10
+
+commit 8cdab84afe17118fe26510793c2b2bbd86d9a1f7
+Author: “tomboy98” <ubuntu@ip-172-31-81-12.ec2.internal>
+Date:   Mon Apr 10 12:21:50 2023 +0000
+
+    First_Commit
+
+commit 5beb3cad75e3f1d34c437cabbf7400ebaad2271e
+Author: tomboy98 <43380953+tomboy98@users.noreply.github.com>
+Date:   Mon Apr 10 13:22:05 2023 +0530
+
+    Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls -la
+total 64
+drwxr-xr-x  10 ashwathyjairaj  staff   320 Sep  3 10:14 .
+drwxr-xr-x   7 ashwathyjairaj  staff   224 Aug 25 14:33 ..
+-rw-r--r--@  1 ashwathyjairaj  staff  6148 Aug 24 21:17 .DS_Store
+drwxr-xr-x  13 ashwathyjairaj  staff   416 Sep  3 10:25 .git
+-rw-r--r--@  1 ashwathyjairaj  staff  1708 Aug 24 21:17 DockerVolume_Example.txt
+-rw-r--r--@  1 ashwathyjairaj  staff  1781 Aug 24 21:16 Docker_Commands.txt
+-rw-r--r--@  1 ashwathyjairaj  staff   757 Aug 24 21:09 GitHub_Commands.txt
+-rw-r--r--@  1 ashwathyjairaj  staff  2801 Aug 24 20:52 Kubernetes-version-5-installation-guide
+-rw-r--r--@  1 ashwathyjairaj  staff    28 Aug 24 21:18 README.md
+-rw-r--r--   1 ashwathyjairaj  staff    18 Sep  3 10:14 git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cd git
+cd: no such file or directory: git
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cd .git
+ashwathyjairaj@Ashwathys-MacBook-Air .git % ls
+COMMIT_EDITMSG	HEAD		config		description	hooks		index		info		logs		objects		packed-refs	refs
+ashwathyjairaj@Ashwathys-MacBook-Air .git % cd objects
+ashwathyjairaj@Ashwathys-MacBook-Air objects % cd ..
+ashwathyjairaj@Ashwathys-MacBook-Air .git % cd ..
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % history
+  555  ls
+  556  git status
+  557  vim git_test.txt
+  558  git status
+  559  git diff
+  560  git add git_test.txt
+  561  git commit -m "added some changes"
+  562  git diff
+  563  git log
+  564  ls -la
+  565  cd git
+  566  cd .git
+  567  ls
+  568  cd objects
+  569  cd ..
+  570  cd ..
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-1.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add feature-1.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m added "first feature"
+error: pathspec 'first feature' did not match any file(s) known to git
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added first feature"
+[master 9645fa6] added first feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature-1.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-2.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added new feature"
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	feature-2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add feature-2.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added new feature"
+[master 7847bd8] added new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature-2.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+7847bd8 (HEAD -> master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git checkout -b dev
+Switched to a new branch 'dev'
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git branch
+* dev
+  master
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add .
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   feature-3.txt
+
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added new feature in dev"
+[dev 4dbdae7] added new feature in dev
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add .
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added new feature by dev-2"
+[dev 8afdc06] added new feature by dev-2
+ 1 file changed, 2 insertions(+)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git  log --oneline
+8afdc06 (HEAD -> dev) added new feature by dev-2
+4dbdae7 added new feature in dev
+7847bd8 (master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt                         
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "bad changes"
+[dev 8cb80e2] bad changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cat feature-3.txt
+dev -2 added some changes
+dev  -2 has bad chnages
+this is feature 3 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+8cb80e2 (HEAD -> dev) bad changes
+8afdc06 added new feature by dev-2
+4dbdae7 added new feature in dev
+7847bd8 (master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git revert 8cb80e2
+[dev a2eba7f] Revert "bad changes"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cat feature-3.txt
+dev -2 added some changes
+
+this is feature 3 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+a2eba7f (HEAD -> dev) Revert "bad changes"
+8cb80e2 bad changes
+8afdc06 added new feature by dev-2
+4dbdae7 added new feature in dev
+7847bd8 (master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % history
+  585  git add .
+  586  git status
+  587  git commit -m "added new feature in dev"
+  588  vim feature-3.txt
+  589  git add .
+  590  git commit -m "added new feature by dev-2"
+  591  git  log --oneline
+  592  vim feature-3.txt
+  593  vim feature-3.txt
+  594  git add feature-3.txt
+  595  git commit -m "bad changes"
+  596  cat feature-3.txt
+  597  git log --oneline
+  598  git revert 8cb80e2
+  599  cat feature-3.txt
+  600  git log --oneline
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git reset 7847bd8
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	feature-3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add .
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added safe chnages"
+[dev 72f0fa0] added safe chnages
+ 1 file changed, 3 insertions(+)
+ create mode 100644 feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+72f0fa0 (HEAD -> dev) added safe chnages
+7847bd8 (master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		GitHub_Commands.txt			README.md				feature-2.txt				git_test.txt
+Docker_Commands.txt			Kubernetes-version-5-installation-guide	feature-1.txt				feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cat feature-2.txt
+This is another feature
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-2.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add .
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added feature 2 changes"
+[dev 977ac12] added feature 2 changes
+ 1 file changed, 2 insertions(+)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+977ac12 (HEAD -> dev) added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 (master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		GitHub_Commands.txt			README.md				feature-2.txt
+Docker_Commands.txt			Kubernetes-version-5-installation-guide	feature-1.txt				git_test.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline 
+7847bd8 (HEAD -> master) added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git cherrypick 977ac12
+git: 'cherrypick' is not a git command. See 'git --help'.
+
+The most similar command is
+	cherry-pick
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git cherry-pick 977ac12
+[master 650ac4c] added feature 2 changes
+ Date: Sun Sep 3 16:06:25 2023 +0530
+ 1 file changed, 2 insertions(+)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline      
+650ac4c (HEAD -> master) added feature 2 changes
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cat feature-2.txt
+This is another feature
+
+dev-2 added some chngs to feature
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git checkout dev
+Switched to branch 'dev'
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+977ac12 (HEAD -> dev) added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % vim feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git add .
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git diff
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git commit -m "added dev-1 changes in feature 3"
+[dev 4297b38] added dev-1 changes in feature 3
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+4297b38 (HEAD -> dev) added dev-1 changes in feature 3
+977ac12 added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --pretty=oneline
+4297b3887552b08c08da3789cd1c040280271be9 (HEAD -> dev) added dev-1 changes in feature 3
+977ac126a51cd4fb4111ed9a730a83421857a148 added feature 2 changes
+72f0fa02f6bcd52d332fbc1326f786c34e1d80c9 added safe chnages
+7847bd8929ed2178d0a302bd87e23db243d7a285 added new feature
+9645fa67d11d8bd6555a9b1b4148a8d470c9e556 added first feature
+8c078b1a0a4197ed912637f2ac9578cd8abf17b3 added some changes
+defb06f18f52406e4ec382550d6ba154b68d2afd  Adding a test file for git
+382f068bf427eb42633a30d426d185e15ea51a79 (origin/master, origin/HEAD) Adding_new_commands
+3a86291868d27b097f7fcf3515edd16404098bce Docker_VolumrExample
+2c5f0f2ee4c8e78d4b118de5e2f86508e9066b6a Create Docker_Fundamentals
+23134e3d64a151ebed0d2ea12bcbb090027a44f5 Update Kubernetes-version-5-installation-guide
+40421ef8a3502a9bf315a5fb610f404b505dc031 Kubernetes-version-5-installation-guide
+db1451c3612975b042d99c990591e7fab8f8c65e Task10
+8cdab84afe17118fe26510793c2b2bbd86d9a1f7 First_Commit
+5beb3cad75e3f1d34c437cabbf7400ebaad2271e Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline       
+4297b38 (HEAD -> dev) added dev-1 changes in feature 3
+977ac12 added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git branch
+  dev
+* master
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git merge dev
+Merge made by the 'ort' strategy.
+ feature-3.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline  
+242c83b (HEAD -> master) Merge branch 'dev'
+4297b38 (dev) added dev-1 changes in feature 3
+650ac4c added feature 2 changes
+977ac12 added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % ls
+DockerVolume_Example.txt		GitHub_Commands.txt			README.md				feature-2.txt				git_test.txt
+Docker_Commands.txt			Kubernetes-version-5-installation-guide	feature-1.txt				feature-3.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % cat feature-3.txt
+dev -2 added some changes
+
+this is feature 3
+
+dev-3cadded some changes 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline
+242c83b (HEAD -> master) Merge branch 'dev'
+4297b38 (dev) added dev-1 changes in feature 3
+650ac4c added feature 2 changes
+977ac12 added feature 2 changes
+72f0fa0 added safe chnages
+7847bd8 added new feature
+9645fa6 added first feature
+8c078b1 added some changes
+defb06f  Adding a test file for git
+382f068 (origin/master, origin/HEAD) Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git remote -v
+origin	git@github.com:tomboy98/DevOps.git (fetch)
+origin	git@github.com:tomboy98/DevOps.git (push)
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch> master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git remote add origin git@github.com:tomboy98/DevOps.git (
+> :q
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> clear
+> exit
+>      
+> 
+> 
+> 
+Last login: Sun Sep  3 16:20:08 on ttys000
+ashwathyjairaj@Ashwathys-MacBook-Air ~ % cd Documents 
+ashwathyjairaj@Ashwathys-MacBook-Air Documents % cd DeVops_Learn 
+ashwathyjairaj@Ashwathys-MacBook-Air DeVops_Learn % ls
+DevOps		output.txt	output1.txt
+ashwathyjairaj@Ashwathys-MacBook-Air DeVops_Learn % cd DevOps 
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), 2.48 KiB | 633.00 KiB/s, done.
+From github.com:tomboy98/DevOps
+ * branch            master     -> FETCH_HEAD
+   382f068..b05d843  master     -> origin/master
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git pull origin master --rebase
+From github.com:tomboy98/DevOps
+ * branch            master     -> FETCH_HEAD
+dropping 977ac126a51cd4fb4111ed9a730a83421857a148 added feature 2 changes -- patch contents already upstream
+Successfully rebased and updated refs/heads/master.
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git log --oneline              
+b9f1f50 (HEAD -> master) added dev-1 changes in feature 3
+312a49f added safe chnages
+f945d89 added feature 2 changes
+bb53b8f added new feature
+e849429 added first feature
+c52ab5e added some changes
+fe1a971  Adding a test file for git
+b05d843 (origin/master, origin/HEAD) Update Linux_fundamental_commands
+cece1ab Merge pull request #1 from yaminijairaj/master
+fc3f472 Create Linux_fundamental_commands
+382f068 Adding_new_commands
+3a86291 Docker_VolumrExample
+2c5f0f2 Create Docker_Fundamentals
+23134e3 Update Kubernetes-version-5-installation-guide
+40421ef Kubernetes-version-5-installation-guide
+db1451c Task10
+8cdab84 First_Commit
+5beb3ca Initial commit
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git push origin master
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (21/21), 1.79 KiB | 1.79 MiB/s, done.
+Total 21 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+To github.com:tomboy98/DevOps.git
+   b05d843..b9f1f50  master -> master
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git checkout dev
+Switched to branch 'dev'
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % git push origin dev
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (21/21), 1.75 KiB | 1.75 MiB/s, done.
+Total 21 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/tomboy98/DevOps/pull/new/dev
+remote: 
+To github.com:tomboy98/DevOps.gitashwathyjairaj@Ashwathys-MacBook-Air DevOps % history
+  639  cd Documents
+  640  cd DeVops_Learn
+  641  ls
+  642  cd DevOps
+  643  ls
+  644  git pull origin master
+  645  cd Documents
+  646  cd DeVops_Learn
+  647  ls
+  648  cd DevOps
+  649  git pull origin master
+  650  git pull origin master --rebase
+  651  git log --oneline
+  652  git push origin master
+  653  git checkout dev
+  654  git push origin dev
+ashwathyjairaj@Ashwathys-MacBook-Air DevOps % 
+ * [new branch]      dev -> dev
+Git stash
+Git squash
