@@ -24,6 +24,7 @@ git stash pop - removes the changes from stash and reapply them in the working d
 git stash reapply - It reapplies the changes changes without removing from the working directory.
 git stash -u - Stashing untracked( if we do not use git add then it is untracked it is not in the staging enviornment) files.
 git stash show - Shows the list of stashes.
+git merge --squash feature-branch - Combining multiple commits to a single commit 
 
 
 
