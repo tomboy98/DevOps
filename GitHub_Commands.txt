@@ -9,4 +9,26 @@ git commit -m "Message" - Committing the local changes
 git push origin <branch_name> - For pushing the local changes to the remote repository
 git checkout -b <new_branch_name> - For creating a new branch
 git branch - For listing down the branches
-git checkout <branch_name> - For switching between branches 
+git checkout <branch_name> - For switching between branches
+git log - shows the commit id, date/time , email id and all the details of the commit.
+git log --oneline - Shows the logs in one line which is easier to understand.
+git diff - Shows the difference in the files with and without commit.
+git branch - Displays the branches which are available also the current branch which we are working.
+git revert <Commit_ID>-  Undoes all the changes which are commited til the commit ID.(Commit id can be checked through git log).
+git reset <Commit_ID>/HEAD - Undoes all the changes which are uncommited.
+git cherry-pick <Commit_ID> - Adding HEAD to a specific commit.
+git pull origin <branchname> --rebase - Cleaner project history - oneliner commits
+git merge <branchname> - Merging two branches with all the commits.
+git stash - temporarily stashes(shelves) the changes you have made to the working directory.
+git stash pop - removes the changes from stash and reapply them in the working directory.
+git stash reapply - It reapplies the changes changes without removing from the working directory.
+git stash -u - Stashing untracked( if we do not use git add then it is untracked it is not in the staging enviornment) files.
+git stash show - Shows the list of stashes.
+
+
+
+
+
+
+
+
