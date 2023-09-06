@@ -1,5 +1,5 @@
 ------------------------------------------------------------------PODS COMMANDS---------------------------------------------------------------------------------------------------------------------------------
-kubectl get pods - To check how many pods are running, state of the pods etc.(READY State- no of containers running/ Total no of containers)
+kubectl get pods - To check how many default  pods are running, state of the pods etc.(READY State- no of containers running/ Total no of containers)
 kubectl run <name_of_the_pod> --image=<image_name>
 kubectl describe pod <pod_name> --- no of containers, image state, container and the image names all the details are described here.
 kubectl get pods -o wide -- Here the along with nodes it is displayed.
@@ -9,3 +9,14 @@ kubectl run <name_of_the_pod> --image=<imagename> --dry-run=client -o yaml > Fil
 kubectl create -f <podname>.yaml - Here through the yaml file we have created the pod.
 kubectl apply -f <pod_name>.yaml - So here we can edit the yaml file for pod and apply it again.
 kubectl edit pod <pod_name> - This open the posd in a vi editor and we can edit it accordingly.
+-----------------------------------------------------ReplicaSets COMMAND---------------------------------------------------------------------------------------------------------------------------------------------
+kubectl get replicasets - Here default replicasets no of replica sets, running ones are displayed.
+kubectl describe replicaset <replicaset-name> - Here the details of replica sets are described.
+kubectl create -f <replica-set-filename.yaml> - Here we are creating a replicaset
+kubectl apply -f <replica-set-filename.yaml> - Here we can edit and apply the replicasets.
+kubectl explain replicaset - So it is similar to help or man pages.
+kubectl delete replicaset <replicaset-name> - For deleting replicasets
+kubectl edit replicaset <replica-set-name> - Here we can edit the replicasets
+kubectl scale replicaset <replica-set-name> --replicas=5 - Here we can scale the replica set to 5 nos.
+
+
