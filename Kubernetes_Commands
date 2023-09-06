@@ -1,0 +1,11 @@
+------------------------------------------------------------------PODS COMMANDS---------------------------------------------------------------------------------------------------------------------------------
+kubectl get pods - To check how many pods are running, state of the pods etc.(READY State- no of containers running/ Total no of containers)
+kubectl run <name_of_the_pod> --image=<image_name>
+kubectl describe pod <pod_name> --- no of containers, image state, container and the image names all the details are described here.
+kubectl get pods -o wide -- Here the along with nodes it is displayed.
+kubectl delete pod <PODNAME> - Deleting a pod
+kubectl run <name_of_the_pod> --image=<imagename> --dry-run=client -o yaml - Here we have to dry run the pod and then display the output in yaml file.
+kubectl run <name_of_the_pod> --image=<imagename> --dry-run=client -o yaml > Filename.yaml - So here we can re- direct the output to another yaml file.
+kubectl create -f <podname>.yaml - Here through the yaml file we have created the pod.
+kubectl apply -f <pod_name>.yaml - So here we can edit the yaml file for pod and apply it again.
+kubectl edit pod <pod_name> - This open the posd in a vi editor and we can edit it accordingly.
