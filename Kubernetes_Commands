@@ -18,5 +18,13 @@ kubectl explain replicaset - So it is similar to help or man pages.
 kubectl delete replicaset <replicaset-name> - For deleting replicasets
 kubectl edit replicaset <replica-set-name> - Here we can edit the replicasets
 kubectl scale replicaset <replica-set-name> --replicas=5 - Here we can scale the replica set to 5 nos.
+------------------------------------------------Deployment COMMANDS--------------------------------------------------------------------------------------------------------------------
+kubectl get deployments - No of deployments, active one etc will be displayed.
+kubectl describe deployments <deployment-name> - Here the details of deployment is described.
+kubectl create -f <deployment-filename.yaml> - Here we are creating a deployment
+kubectl apply -f <deployment-filename.yaml> - Here we can edit and apply the deployment.
+cp <SRC> <DST> - Useful for copying two files in linux enviornment.
+
+
 
 
