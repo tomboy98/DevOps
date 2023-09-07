@@ -30,7 +30,7 @@ docker run -d -p <host_port>:<port_no_inside_the_container> -e <ENV_VARIABLE=val
 -----------------------------------------DOCKERFILE-----------------------------------------------------------------------------------------------
 docker build -t <container_name> . - Building the dockerfile in current directory with a specific name
 docker run python:3.6 cat /etc/*release* - For finding out the base image of the python.
-
+--------------------------------------------------ENV Variables--------------------------------------------------------------------------------------------
 docker inspect container-name/container-id - To inspect the container with all the details.
 docker inspect 1f5413790360 | grep -A 10 Env - To inspect pecifically env variable.
 
