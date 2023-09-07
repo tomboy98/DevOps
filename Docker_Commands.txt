@@ -43,6 +43,7 @@ docker compose down - stopping the containers.
 docker network ls- Here it lists the network.
 docker insect <container-name> - Displays the network in the container.
 docker network inspect <network_name> - To inspect subnets etc.
+docker network create --driver bridge --subnet 182.18.0.1/24 --gateway 182.18.0.1 wp-mysql-network - Example for creating a network.
 
 
 -----------------------------------Docker_Volume-------------------------------------------------------------------------
