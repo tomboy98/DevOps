@@ -32,6 +32,12 @@ kubectl rollout undo <deployment-name> - for undoing the changes through the rol
 After describing - Maxunavailable - no of replicas that can be down
 rollout concept - all pods won't be down at a single time even if we edit. recreate concept - all pods will be down at the single time.
 
+------------------------------------SERVICE-----------------------------------------------------------------------------------------------------------------------------
+kubectl get services - For deafult services
+kubectl describe service <service-name> - For all the information, pots ,targetport etc
+kubectl apply -f service <service-yaml-file> - for editing the file and applying it
+
+
 
 
 
