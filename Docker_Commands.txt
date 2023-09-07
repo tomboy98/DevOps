@@ -33,6 +33,7 @@ docker run python:3.6 cat /etc/*release* - For finding out the base image of the
 --------------------------------------------------ENV Variables--------------------------------------------------------------------------------------------
 docker inspect container-name/container-id - To inspect the container with all the details.
 docker inspect 1f5413790360 | grep -A 10 Env - To inspect pecifically env variable.
+docker run -d ubuntu sleep 1000 - Example for running command after startig container
 
 
 -----------------------------------Docker_Volume-------------------------------------------------------------------------
