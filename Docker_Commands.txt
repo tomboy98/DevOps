@@ -35,6 +35,10 @@ docker inspect container-name/container-id - To inspect the container with all t
 docker inspect 1f5413790360 | grep -A 10 Env - To inspect pecifically env variable.
 docker run -d ubuntu sleep 1000 - Example for running command after startig container
 
+docker run --name=clickcounter --link redis:redis -p 8085:5000 kodekloud/click-counter
+docker compose up -d - running containers in detach mode.
+docker compose down - stopping the containers
+
 
 -----------------------------------Docker_Volume-------------------------------------------------------------------------
 
