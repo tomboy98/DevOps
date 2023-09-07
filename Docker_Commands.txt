@@ -2,7 +2,7 @@
 
 docker --version - Check the version
 docker pull <image_name> - To pull the latest image from docker hub
-docker images - To check which all images are present.
+docker images - To check which all images are present along with sizes and tags.
 docker run -it -d <image_name> - To run the container iteratively in the background for the specific image
 docker run <image_name> - To run the container
 docker run -d --name <name_of_the_container> <image_name> - Runs a container with particular image name
@@ -26,7 +26,10 @@ docker stop $(docker ps -aq) - Stop all the containers.
 docker rm $(docker ps -aq) - Remove all the containers 
 docker rmi $(docker ps -aq) - Removes all the images.
 docker pull <image_name> - It pulls the specific image
-
+docker run -d -p <host_port>:<port_no_inside_the_container> <image_name> - Here the container is run in a detached mode with host port 38282 with the port 8080 inside the container  .
+-----------------------------------------DOCKERFILE-----------------------------------------------------------------------------------------------
+docker build -t <container_name> . - Building the dockerfile in current directory with a specific name
+docker run python:3.6 cat /etc/*release* - For finding out the base image of the python.
 
 -----------------------------------Docker_Volume-------------------------------------------------------------------------
 
