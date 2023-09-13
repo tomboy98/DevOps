@@ -2,6 +2,7 @@
 
 pwd --> present working directory
 ls --> list all file and directories
+ls -a ---> Shows hidden files also
 cd --> change directory
 cd .  --> current directory
 cd .. --> previous directory
@@ -33,4 +34,11 @@ rm -r directoryname --> To delete non-empty directories
 rm-r directoryname/{directoryname1,directoryname2} --> for specific directory
 rm -r directoryname{1...n} --> for n no. of directories
 history --> shows all the commands used
+uname ------> It shows the name of the kernal.
+uname -r --------> It shows the version of the kernal.
+whoiami -------> It shows currently logged in users.
+date -----------> It shows date and time.
+cp<option><source><destination> --------> Copy command <option> (-r - recursive ,-v verbose,-f forcefully)
 
+
+------------------------------------------------LINUX ADVANCED-------------------------------------------------------------------------------------------
