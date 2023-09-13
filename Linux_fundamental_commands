@@ -39,6 +39,18 @@ uname -r --------> It shows the version of the kernal.
 whoiami -------> It shows currently logged in users.
 date -----------> It shows date and time.
 cp<option><source><destination> --------> Copy command <option> (-r - recursive ,-v verbose,-f forcefully)
+rm -rvf <file/directory> - For deleting file or directory.
+mv<src><dst> - For renaming the files or directories ( It can be many source file and a single destination file or directory.)
+
 
 
 ------------------------------------------------LINUX ADVANCED-------------------------------------------------------------------------------------------
+useradd <username> -------> For creating user account.
+passwd <username> ---------> For creating password.
+grep <username>/etc/passwd ------------> For checking user account properties.
+grep<username>/etc/shadow -----------> For checking user password properties.
+su <usernme> ------------------> To switch user account.
+exit -Logout from the useraccount.
+userdel <username> ------> Deleting user account.
+usermod -l <newname><oldname> ----> For changing login name.
+groupadd <groupname> --------->  For adding groupname
