@@ -26,6 +26,8 @@ docker stop $(docker ps -aq) - Stop all the containers.
 docker rm $(docker ps -aq) - Remove all the containers 
 docker rmi $(docker ps -aq) - Removes all the images.
 docker pull <image_name> - It pulls the specific image
+docker save -o <image-name>.tar <imagename>
+docker load -i <exported-image>.tar
 docker run -d -p <IP:ADDRESS/LOCALHOST><host_port>:<port_no_inside_the_container> -e <ENV_VARIABLE=value> <image_name> -v <SRC>:<DST(var/lib/docker> --network=<network_name>- Here the container is run in a detached mode with host port 38282 with the port 8080 inside the container along with the enviornment variable -v indicates the volume mounted. Also for attaching network.
 -----------------------------------------DOCKERFILE-----------------------------------------------------------------------------------------------
 docker build -t <container_name> . - Building the dockerfile in current directory with a specific name
