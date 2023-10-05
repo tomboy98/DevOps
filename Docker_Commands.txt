@@ -28,6 +28,7 @@ docker rmi $(docker images) - Removes all the images.
 docker pull <image_name> - It pulls the specific image
 docker save -o <image-name>.tar <imagename>
 docker load -i <exported-image>.tar
+docker inspect sha-digest - To check the SHA Encryction 
 docker run -d -p <IP:ADDRESS/LOCALHOST><host_port>:<port_no_inside_the_container> -e <ENV_VARIABLE=value> <image_name> -v <SRC>:<DST(var/lib/docker> --network=<network_name>- Here the container is run in a detached mode with host port 38282 with the port 8080 inside the container along with the enviornment variable -v indicates the volume mounted. Also for attaching network.
 -----------------------------------------DOCKERFILE-----------------------------------------------------------------------------------------------
 docker build -t <container_name> . - Building the dockerfile in current directory with a specific name
@@ -54,3 +55,5 @@ docker volume create <volume_name> - To create a volume
 docker volume ls - To list the volumes
 docker volume inspect <volume_name>- Shows the mount points, labels etc
 docker volume rm <volume_name> - To remove the volumes
+Volumes:
+docker run -d --name test -v myvol2:/app nginx:latest - -v <SRC_CONTAINER>:<TARGET_DESTINATION_INSIDE_CONTAINER>
