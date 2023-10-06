@@ -57,3 +57,12 @@ docker volume inspect <volume_name>- Shows the mount points, labels etc
 docker volume rm <volume_name> - To remove the volumes
 Volumes:
 docker run -d --name test -v myvol2:/app nginx:latest - -v <SRC_CONTAINER>:<TARGET_DESTINATION_INSIDE_CONTAINER>
+docker run -d \ -------------------- Driver
+  --name sshfs-container \
+  --volume-driver vieux/sshfs \
+  --mount src=sshvolume,target=/app,volume-opt=sshcmd=test@node2:/home/test,volume-opt=password=testpassword \
+  nginx:latest
+docker service create -d \---------------NFS
+  --name nfs-service \
+  --mount 'type=volume,source=nfsvolume,target=/app,volume-driver=local,volume-opt=type=nfs,volume-opt=device=:/var/docker-nfs,volume-opt=o=addr=10.0.0.10' \
+  nginx:latest
