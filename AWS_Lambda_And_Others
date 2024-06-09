@@ -5,3 +5,7 @@ Upload JSON File in S3-->Upload it.
 Monitor-->View in Cloud Watch-->Log Stream will be created.
 Add Destination--> SNS/SQS(Need to create one)-->Trigerred on Success.
 SQS--> Name,Encryption-->Monitor
+Elastic Bean-Stalk
+Create an application with specic enviornment.--> Create a role with admin access doe the instance profile role--> other keep as default --> once the env 
+is ready--> upload and deploy the php file.
+open the domain name to to see the php application.
